@@ -1,0 +1,18 @@
+.form-players{
+    display: flex;
+    width: 50%;
+    height: 100vh;
+    
+   
+}
+
+.form-players form{
+    box-sizing: border-box;
+    height: 80vh;
+    width: 50vh;
+    background-color: #014eff;
+    margin: auto;
+    border-radius: 15px;
+    padding: 50px 15px;
+}
+

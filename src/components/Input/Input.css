@@ -1,0 +1,16 @@
+.input-players{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 20px 0px;
+}
+.input-players label{
+  color: white;
+}
+.input-players input{
+    background-color: #fbfbfb;
+    border: none;
+    border-radius: 5px;
+    padding: 5px ;
+    margin-top: 3px;
+}
