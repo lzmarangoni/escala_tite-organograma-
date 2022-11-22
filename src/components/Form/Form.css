@@ -1,15 +1,14 @@
 .form-players{
     display: flex;
-    width: 50%;
-    height: 100vh;
-    margin: auto 0;
-   
+    width: 30%;
+    margin: 50px ;
+    height: 100%
+    
 }
 
 .form-players form{
     box-sizing: border-box;
-    height: 80vh;
-    width: 50vh;
+    width: 100vh;
     background-color: #014eff;
     margin: auto;
     border-radius: 15px;
