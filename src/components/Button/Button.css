@@ -1,0 +1,16 @@
+.buttonForm{
+    display: flex;
+    justify-content: center;
+   
+}
+
+.buttonForm button{
+    background-color:#ffd200;
+    color: #014eff;
+    border: none;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: large;
+    margin-top: 20px;
+}

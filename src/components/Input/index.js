@@ -6,7 +6,7 @@ export const Input =(props)=>{
             <label>
                 {props.label}
             </label>
-            <input/>
+            <input placeholder={props.placeholder}/>
         </div>
     )
 }
