@@ -1,4 +1,5 @@
 
+import { useState } from "react";
 import { Button } from "../Button";
 import Input from "../Input";
 import { List } from "../List";
@@ -10,14 +11,16 @@ export const Form = (props)=>{
         e.preventDefault();
         console.log("formulario salbo")
       }
+    const [InputPlayer , setInputPlayer] = useState("Canarinho Pistola")
+    const [InputImage, setInputImage] = useState("https...")
     
     return(
         <div className="form-players">
             <form onSubmit={savePlayer} >
-            <Input label="Nome do Jogador"/>
-            <Input label="Foto"/>
-            <List listName="Posição" items= {positions} />
-            <Button nameButton="Escalar"/>
+                <Input value={InputPlayer} changeValue={setInputPlayer} label="Nome do Jogador"/>
+                <Input value={InputImage} changeValue={setInputImage} label="Foto"/>
+                <List listName="Posição" items= {positions} />
+                <Button nameButton="Escalar"/>
             </form>
         </div>
     )
