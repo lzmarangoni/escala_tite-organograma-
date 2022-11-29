@@ -5,7 +5,7 @@ import Form from './components/Form';
 
 function App() {
   
- 
+  const positions = [' ','goleiro', 'zagueiro'];
   const [players, setPlayers] =useState([])
 
   const addNewPlayer = (player)=>{
@@ -17,7 +17,7 @@ function App() {
 
     <div className="App">
       <Banner title="Escala TITE"/>
-      <Form newPlayer={player => addNewPlayer(player)} />
+      <Form items={positions} newPlayer={player => addNewPlayer(player)} />
 
       
     </div>

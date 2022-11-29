@@ -6,7 +6,7 @@ import { List } from "../List";
 import "./Form.css";
 
 export const Form = (props)=>{
-    const positions = [' ','goleiro', 'zagueiro'];
+    
     
     function savePlayer(e){
         e.preventDefault();
@@ -41,7 +41,7 @@ export const Form = (props)=>{
                     label="Foto"/>
                 <List 
                     listName="Posição" 
-                    items= {positions}
+                    items= {props.items}
                     value = {playerList}
                     changeValue = {playerList => SetPlayerList(playerList)} />
                 <Button nameButton="Escalar"/>

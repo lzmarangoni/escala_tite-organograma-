@@ -15,7 +15,7 @@ export const Input =(props)=>{
             <label>
                 {props.label}
             </label>
-            <input value={props.value} onChange={onTip} placeholder={props.placeholder}/>
+            <input required={true} value={props.value} onChange={onTip} placeholder={props.placeholder}/>
         </div>
     )
 }
