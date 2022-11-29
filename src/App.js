@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import Banner from './components/Banner';
+import Container from './components/Container';
+import Field from './components/Field';
 import Form from './components/Form';
+
 
 
 function App() {
@@ -16,10 +19,15 @@ function App() {
   return (
 
     <div className="App">
-      <Banner title="Escala TITE"/>
-      <Form items={positions} newPlayer={player => addNewPlayer(player)} />
-
-      
+      <Container>
+        <Banner title="Escala TITE"/>
+        <section >
+          <Form items={positions} newPlayer={player => addNewPlayer(player)} />
+          <Field>
+            
+          </Field>
+        </section>
+        </Container>
     </div>
   );
 }
