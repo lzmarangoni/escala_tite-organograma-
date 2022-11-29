@@ -6,24 +6,36 @@ import { List } from "../List";
 import "./Form.css";
 
 export const Form = (props)=>{
-    const positions = ['goleiro', 'zagueiro'];
+    const positions = [' ','goleiro', 'zagueiro'];
+    
     function savePlayer(e){
         e.preventDefault();
-        console.log(InputPlayer,InputImage,playerList)
+        props.newPlayer({
+            InputPlayer,
+            InputImage,
+            playerList
+        })
+        
+        
       }
-    const [InputPlayer , setInputPlayer] = useState("Canarinho Pistola")
-    const [InputImage, setInputImage] = useState("https...")
-    const [playerList, SetPlayerList] = useState("")
+
+   
+    const [InputPlayer , setInputPlayer] = useState("")
+    const [InputImage, setInputImage] = useState("")
+    const [playerList, SetPlayerList] = useState(" ")
    
     
     return(
         <div className="form-players">
             <form onSubmit={savePlayer} >
+                
                 <Input 
+                    placeholder="Canarinho Pistola"
                     value={InputPlayer} 
                     changeValue={setInputPlayer} 
                     label="Nome do Jogador"/>
                 <Input 
+                    placeholder="https://..."
                     value={InputImage} 
                     changeValue={setInputImage} 
                     label="Foto"/>

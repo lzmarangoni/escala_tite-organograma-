@@ -8,7 +8,7 @@ export const List =(props)=>{
     return(
         <div className="list">
             <label>{props.listName}</label>
-            <select onChange={selectOption} value={props.value}>
+            <select value={props.value} onChange={selectOption} >
                 {props.items.map(item => <option key={item}>{item}</option>)}
             </select>
         </div>
