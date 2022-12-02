@@ -2,9 +2,9 @@ import './Player.css'
 
 const Player = (props)=>{
     return(
-        <section>
-            <img src={props.img}/>
-            <h1>{props.name}</h1>
+        <section className='player' style={{top: props.yAxis, right:props.xAxis}}>
+            <img src="https://avatars.githubusercontent.com/u/98007645?v=4"/>
+            <h1>Luiz</h1>
             <h3>{props.position}</h3>
         </section>
     )

@@ -1,0 +1,41 @@
+.player{
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    position: absolute;
+    top: 18rem;
+
+}
+
+.player img{
+    
+    border-radius: 5px;
+    height: 3rem;
+    width: 3rem;
+    padding: 0px;
+
+}
+
+.player h1{
+    box-sizing: border-box;
+    background-color: #ffd200;
+    font-size: 1rem;
+    padding: .15rem 1.5rem;
+    margin: 0px;
+    border-radius: 5px;
+    color: #014eff;
+
+}
+
+.player h3{
+    text-align: center;
+    color: white;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: .1rem .5rem;
+    background-color: #014eff;
+    margin: 0px;
+    top: 7.5rem;
+    font-size: 0.8rem;
+    
+}

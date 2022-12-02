@@ -3,13 +3,61 @@ import Banner from './components/Banner';
 import Container from './components/Container';
 import Field from './components/Field';
 import Form from './components/Form';
+import Player from './components/Player';
 
 
 
 function App() {
   
-  const positions = [' ','goleiro', 'zagueiro'];
-  const [players, setPlayers] =useState([])
+  const positions = [
+    { position:'Goleiro',
+      yAxis:'20rem',
+      xAxis:''
+    },
+    { position:'Zagueiro-Esq',
+      yAxis:'15rem',
+      xAxis:'25rem'
+    },
+    { position:'Zagueiro-Dir',
+      yAxis:'15rem',
+      xAxis:'13rem'
+    },
+    { position:'Lateral-Esq',
+      yAxis:'11rem',
+      xAxis:'8rem'
+    },
+    { position:'Lateral-Dir',
+      yAxis:'11rem',
+      xAxis:'31rem'
+    },
+    { position:'Volante',
+      yAxis:'10rem',
+      xAxis:''
+    },
+    { position:'Meia-Esq',
+      yAxis:'7rem',
+      xAxis:'26rem'
+    },
+    { position:'Meia-Dir',
+    yAxis:'7rem',
+    xAxis:'13rem'
+    },
+    {
+      position: 'Ponta-Esq',
+      yAxis: '0.25rem',
+      xAxis: '26rem'
+    },
+    {
+      position: 'Ponta-Dir',
+      yAxis: '0.25rem',
+      xAxis: '13rem'
+    },
+    { position:'Centravante',
+    yAxis:'0',
+    xAxis:''
+  },
+  ];
+  const [players, setPlayers] = useState([])
 
   const addNewPlayer = (player)=>{
     setPlayers([...players, player])
@@ -21,10 +69,10 @@ function App() {
     <div className="App">
       <Container>
         <Banner title="Escala TITE"/>
-        <section >
-          <Form items={positions} newPlayer={player => addNewPlayer(player)} />
+        <section>
+          <Form items={positions.map(position=> [position.position])} newPlayer={player => addNewPlayer(player)} />
           <Field>
-            
+              {positions.map(player =><Player key={player.position} position={player.position} yAxis={player.yAxis} xAxis={player.xAxis}/> )}
           </Field>
         </section>
         </Container>
