@@ -11,8 +11,8 @@ export const Form = (props)=>{
     function savePlayer(e){
         e.preventDefault();
         props.newPlayer({
-            InputPlayer,
-            InputImage,
+            name,
+            image,
             playerList
         })
         
@@ -20,8 +20,8 @@ export const Form = (props)=>{
       }
 
    
-    const [InputPlayer , setInputPlayer] = useState("")
-    const [InputImage, setInputImage] = useState("")
+    const [name , setname] = useState("")
+    const [image, setimage] = useState("")
     const [playerList, SetPlayerList] = useState(" ")
    
     
@@ -31,13 +31,13 @@ export const Form = (props)=>{
                 
                 <Input 
                     placeholder="Canarinho Pistola"
-                    value={InputPlayer} 
-                    changeValue={setInputPlayer} 
+                    value={name} 
+                    changeValue={setname} 
                     label="Nome do Jogador"/>
                 <Input 
                     placeholder="https://..."
-                    value={InputImage} 
-                    changeValue={setInputImage} 
+                    value={image} 
+                    changeValue={setimage} 
                     label="Foto"/>
                 <List 
                     listName="Posição" 

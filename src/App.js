@@ -3,7 +3,7 @@ import Banner from './components/Banner';
 import Container from './components/Container';
 import Field from './components/Field';
 import Form from './components/Form';
-import Player from './components/Player';
+import Position from './components/Position';
 
 
 
@@ -72,8 +72,13 @@ function App() {
         <section>
           <Form items={positions.map(position=> [position.position])} newPlayer={player => addNewPlayer(player)} />
           <Field>
-              {positions.map(player =><Player key={player.position} position={player.position} yAxis={player.yAxis} xAxis={player.xAxis}/> )}
-          </Field>
+              {positions.map(position =>
+                <Position position={position.position}
+                key={position.position}
+                  xAxis={position.xAxis}
+                  yAxis={position.yAxis}
+                  player={players}/>)}
+          </Field> 
         </section>
         </Container>
     </div>

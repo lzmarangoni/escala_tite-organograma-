@@ -2,8 +2,7 @@
     display: flex;
     flex-direction: column;
     margin: 0px;
-    position: absolute;
-    top: 18rem;
+    
 
 }
 
@@ -27,15 +26,3 @@
 
 }
 
-.player h3{
-    text-align: center;
-    color: white;
-    box-sizing: border-box;
-    border-radius: 5px;
-    padding: .1rem .5rem;
-    background-color: #014eff;
-    margin: 0px;
-    top: 7.5rem;
-    font-size: 0.8rem;
-    
-}
