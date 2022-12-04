@@ -24,11 +24,11 @@ function App() {
     },
     { position:'Lateral-Esq',
       yAxis:'11rem',
-      xAxis:'8rem'
+      xAxis:'31rem'
     },
     { position:'Lateral-Dir',
       yAxis:'11rem',
-      xAxis:'31rem'
+      xAxis:'8rem'
     },
     { position:'Volante',
       yAxis:'10rem',
@@ -77,7 +77,7 @@ function App() {
                 key={position.position}
                   xAxis={position.xAxis}
                   yAxis={position.yAxis}
-                  player={players}/>)}
+                  player={players.filter(player => player.position === position.position)}/>)}
           </Field> 
         </section>
         </Container>

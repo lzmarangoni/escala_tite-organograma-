@@ -1,10 +1,10 @@
 import './Player.css'
 
-const Player = (props)=>{
+const Player = ({image ,name})=>{
     return(
         <section className='player' >
-            <img src={props.image}/>
-            <h1>{props.name}</h1>
+            <img src={image}/>
+            <h1>{name}</h1>
             
         </section>
     )

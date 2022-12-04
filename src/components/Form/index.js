@@ -13,16 +13,18 @@ export const Form = (props)=>{
         props.newPlayer({
             name,
             image,
-            playerList
+            position
         })
-        
+        setname('')
+        setimage('')
+        setPosition('')
         
       }
 
    
     const [name , setname] = useState("")
     const [image, setimage] = useState("")
-    const [playerList, SetPlayerList] = useState(" ")
+    const [position, setPosition] = useState("Goleiro")
    
     
     return(
@@ -42,8 +44,8 @@ export const Form = (props)=>{
                 <List 
                     listName="Posição" 
                     items= {props.items}
-                    value = {playerList}
-                    changeValue = {playerList => SetPlayerList(playerList)} />
+                    value = {position}
+                    changeValue = {position => setPosition(position)} />
                 <Button nameButton="Escalar"/>
             </form>
         </div>
